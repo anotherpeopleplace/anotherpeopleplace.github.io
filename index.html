@@ -37,7 +37,7 @@
       color: #000;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      transform: rotate(-0.8deg);
+      transform: rotate(-0.2deg);
     }
 
     p.tagline {
@@ -96,6 +96,24 @@
       background: #333;
     }
 
+    .rsvp-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .rsvp-icon {
+      width: 100px;
+      height: auto;
+    }
+
+    .rsvp-icon.mirrored {
+      transform: scaleX(-1);
+    }
+
     footer {
       margin-top: 4rem;
       font-size: 0.9rem;
@@ -117,6 +135,10 @@
       mix-blend-mode: multiply;
     }
 
+    p {
+      line-height: 1.6;
+    }
+
     .headerphoto {
       max-width: 600px;
       width: 100%;
@@ -134,6 +156,7 @@
       width: 100%;
       text-align: left;
       box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
     }
 
     .about h2 {
@@ -200,16 +223,25 @@
     <p><span class="highlight">Venue:</span> Civic House, Glasgow, G4 9RH</p>
   </section>
 
-  <div class="rsvp">
-    <a href="https://forms.gle/example" target="_blank">RSVP</a>
+  <div class="rsvp-container">
+    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/main/images/stack.jpg" alt="Left Icon" class="rsvp-icon">
+    
+    <div class="rsvp">
+      <a href="https://www.tickettailor.com/" class="rsvp-button" target="_blank">Advance Tix</a>
+    </div>
+
+    <img src="images/stack.jpg" alt="Right Icon" class="rsvp-icon mirrored">
   </div>
 
   <section class="about">
     <h2>The story so far...</h2>
-    <p>In late 2023 we had the idea to start building a soundsystem. Over the course of last year we spent whatever time we could find, thinking about designs, drawing up plans, and cutting up and gluing together bits of plywood in the workshop. After a few recent successful test outings we're now ready to start a regular party using it. These parties will be held in Civic House's downstairs venue space - a building we're very familiar with through the running of Coorie Doon since 2023. This night aims to share a lot of the core ethos around the joy of dancing and community spirit but with an additional focus on the DIY exploration of audio and with a marginally 'deeper' sound, specifically revolving around the sounds of Detroit. What else to expect from our opening night:</p>
+    <p>In late 2023 we had the idea to start building a soundsystem. Over the course of last year we spent whatever time we could find, drawing up plans, self-doubting over design choices, making a mess with wood glue in the workshop, and painting by headtorch. After a few successful test outings in the last few months we're now buzzing to start a regular party using it. These parties will be held in Civic House's downstairs venue space - a building we're very familiar with through the running of Coorie Doon since 2023. This night aims to share a lot of the core ethos around the joy of dancing and community spirit but with an additional focus on the DIY exploration of audio and with a marginally 'deeper' sound, specifically revolving around the sounds of Detroit.</p>
+    <p>What to expect from these nights?</p>
     <ul>
-      <li>Sonic exploration through the music selections and the fine tuning and building of the system</li>
+      <li>Two stacks of carefully tuned speakers featuring classic Altec designs (shout out to Cosmic Slop for the inspiration <3) powered by modern drivers and amplification</li>
+      <li>Sonic exploration through the music selections and the building/upgrading of the system over time</li>
       <li>An, as yet, untested wooden parquet dancefloor that we drove across the country in a van to pick up</li>
+      <li>Some cool lights</li>
       <li>Deep selections, big grooves, warm atmosphere, communal energy</li>
     </ul>
     <br>
@@ -217,15 +249,7 @@
     <ul>
       <li>Show kindness and respect towards fellow dancers</li>
       <li>No photos, videos, or excessive chatting on the dancefloor</li>
-      <li>...</li>
-    </ul>
-    <br>
-    <h2>Influences</h2>
-    <ul>
-      <li>Monty</li>
-      <li>Danny Tenaglia</li>
-      <li>Tribal Rhythms</li>
-      <li>Tim Love</li>
+      <li>Zero tolerance for any discrimonatory language or actions, the dancefloor is a safe space for freedom of expression</li>
     </ul>
     <br>
     <h2>Mailing list</h2>
@@ -236,13 +260,24 @@
     <p>
       We're also on instagram </a>
     </p>
-    <br> 
+    <br>
+    <h2>Other outings</h2>
+    <p>
+      Vita Nova @ McNeill's, Sunday 3rd August</a>
+    </p>
+    
+    <br>
   </section>
+
 
   <section class="mix">
     <h2>Listen</h2>
     <iframe width="100%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FCoorie_Doon%2Fcoorie-doon-220225-civic-house%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" ></iframe>
   </section>
+
+
+  <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/main/images/build.jpg" alt="Another People Place build photo" class="headerphoto">
+
 
   <footer>
     <p>
