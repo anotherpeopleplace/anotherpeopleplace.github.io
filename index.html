@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Another People Place</title>
+
+  <!-- Distressed typewriter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Special Elite', monospace;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0.5rem 0;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transform: rotate(-0.8deg);
+    }
+
+    p.tagline {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .event {
+      background: #f5f5f5;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      max-width: 600px;
+      width: 100%;
+      text-align: left;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .event h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+
+    .event p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .rsvp {
+      margin-top: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .rsvp a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .rsvp a:hover {
+      background: #333;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+
+    /* Grain overlay */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fHww');
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+      mix-blend-mode: multiply;
+    }
+
+    .headerphoto {
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .about {
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      max-width: 600px;
+      width: 100%;
+      text-align: left;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .about h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #000;
+    }
+
+    .about ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin: 0;
+    }
+
+    .about li {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .event {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay"></div>
+
+  <header>
+    <h1>Another People Place</h1>
+    <p class="tagline">A party and soundsystem in Glasgow</p>
+  </header>
+
+  <img src="https://raw.githubusercontent.com/Cameron1470/Cameron1470.github.io/main/images/headerphoto.jpg" alt="Another People Place group photo" class="headerphoto">
+  
+  <section class="event">
+    <h2>Upcoming party</h2>
+    <p><span class="highlight">Date:</span> Saturday 19th July 2025</p>
+    <p><span class="highlight">Time:</span> 8 PM till late</p>
+    <p><span class="highlight">Venue:</span> Civic House, Glasgow, G4 9RH</p>
+  </section>
+
+  <div class="rsvp">
+    <a href="https://forms.gle/example" target="_blank">RSVP</a>
+  </div>
+
+  <section class="about">
+    <h2>The story so far...</h2>
+    <p>In late 2023 we had the idea to start building a soundsystem. Over the course of last year we spent whatever time we could find, thinking about designs, drawing up plans, and cutting up and gluing together bits of plywood in the workshop. After a few recent successful test outings we're now ready to start a regular party using it. These parties will be held in Civic House's downstairs venue space - a building we're very familiar with through the running of Coorie Doon since 2023. This night aims to share a lot of the core ethos around the joy of dancing and community spirit but with an additional focus on the DIY exploration of audio and with a marginally 'deeper' sound, specifically revolving around the sounds of Detroit. What else to expect from our opening night:</p>
+    <ul>
+      <li>Sonic exploration through the music selections and the fine tuning and building of the system</li>
+      <li>An, as yet, untested wooden parquet dancefloor that we drove across the country in a van to pick up</li>
+      <li>Deep selections, big grooves, warm atmosphere, communal energy</li>
+    </ul>
+    <br>
+    <h2>House rules</h2>
+    <ul>
+      <li>Show kindness and respect towards fellow dancers</li>
+      <li>No photos, videos, or excessive chatting on the dancefloor</li>
+      <li>...</li>
+    </ul>
+    <br>
+    <h2>Influences</h2>
+    <ul>
+      <li>Monty</li>
+      <li>Danny Tenaglia</li>
+      <li>Tribal Rhythms</li>
+      <li>Tim Love</li>
+    </ul>
+    <br>
+    <h2>Mailing list</h2>
+    <p>
+      The best way to keep up-to-date with what we're doing at Civic House and other outings of the system in and around the city is to join our mailing list. No automated processes here, just drop us an email saying hi to 
+      <a href="mailto:hello@anotherpeople.place">hello@anotherpeople.place</a>
+    </p>
+    <br> 
+  </section>
+
+  <footer>
+    <p>Follow updates on Instagram @anotherpeopleplace</p>
+  </footer>
+</body>
+</html>
