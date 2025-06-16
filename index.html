@@ -26,11 +26,16 @@
       z-index: 1;
     }
 
+    header {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
     .header-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.5rem;
       /* Removed flex-wrap and flex-direction: column on small screens */
       margin-bottom: 3rem;
       text-align: center;
@@ -52,6 +57,11 @@
 
     /* Optional: make icons a bit smaller on small screens, without stacking */
     @media (max-width: 600px) {
+      header {
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+      }
+      
       .header-icon {
         width: 60px;
       }
