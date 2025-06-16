@@ -26,11 +26,37 @@
       z-index: 1;
     }
 
-    header {
-      text-align: center;
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      /* Removed flex-wrap and flex-direction: column on small screens */
       margin-bottom: 3rem;
+      text-align: center;
+      flex-wrap: nowrap;  /* Prevent wrapping, keeps everything in one row */
     }
 
+    .header-content {
+      flex: 0 1 auto;
+    }
+
+    .header-icon {
+      width: 80px;   /* You can tweak this smaller for phones if needed */
+      height: auto;
+    }
+
+    .header-icon.mirrored {
+      transform: scaleX(-1);
+    }
+
+    /* Optional: make icons a bit smaller on small screens, without stacking */
+    @media (max-width: 600px) {
+      .header-icon {
+        width: 60px;
+      }
+    }
+    
     h1 {
       font-size: 3rem;
       margin: 0.5rem 0;
@@ -54,6 +80,7 @@
       width: 100%;
       text-align: left;
       box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      margin-bottom: 1rem;
     }
 
     .text {
@@ -80,15 +107,24 @@
       color: #333;
     }
 
+    .event-poster {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      margin-top: 1rem;
+    }
+
     .highlight {
       font-weight: bold;
       color: #000;
     }
 
     .rsvp {
-      margin-top: 2rem;
+      margin-top: 1rem;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 0rem;
     }
 
     .rsvp a {
@@ -309,25 +345,23 @@
 <body>
   <div class="noise-overlay"></div>
 
-  <header>
-    <h1>Another People Place</h1>
-    <p class="tagline">A party and soundsystem in Glasgow</p>
+  <header class="header-container">
+    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/stack.jpg" alt="Left Icon" class="header-icon">
+    <div class="header-content">
+      <h1>Another People Place</h1>
+      <p class="tagline">A party and soundsystem in Glasgow</p>
+    </div>
+    <img src="images/stack.jpg" alt="Right Icon" class="header-icon mirrored">
   </header>
 
-  <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/main/images/headerphoto.jpg" alt="Another People Place group photo" class="headerphoto">
   
   <section class="event">
     <h2>Upcoming party</h2>
-    <p><span class="highlight">Date:</span> Saturday 19th July 2025</p>
-    <p><span class="highlight">Time:</span> 8 PM till late</p>
-    <p><span class="highlight">Venue:</span> Civic House, Glasgow, G4 9RH</p>
-  </section>
-
-  <div class="rsvp-container">
+    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/main/images/headerphoto.jpg" alt="Party Poster" class="event-poster">
     <div class="rsvp">
       <a href="https://www.tickettailor.com/" class="rsvp-button" target="_blank">Advance Tix</a>
     </div>
-  </div>
+  </section>
 
   <section class="text">
     <p>Dedicated to the deepest soulful cuts, and a house party feel. Weaving through a techno tapestry cut from the cosmos… rooted in the lineage of sounds from detroit and chicago. Channeling elevated and interconnected musical unity here in Glasgow. Can you feel it!?</p>
