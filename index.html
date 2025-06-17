@@ -8,264 +8,293 @@
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Special Elite', monospace;
-      background: #ffffff;
-      color: #111111;
-    }
+  html {
+    font-size: 100%;
+  }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
-      background-color: #ffffff;
+  @media (max-width: 1000px) {
+    html {
+      font-size: 90%;
     }
+  }
 
-    header {
-      padding: 0 0.5rem;
+  @media (max-width: 800px) {
+    html {
+      font-size: 85%;
     }
+  }
 
-    .header-container {
-      position: relative;   /* Make this a positioned container */
-      text-align: center;
-      margin-bottom: 2rem;
+  @media (max-width: 600px) {
+    html {
+      font-size: 80%;
     }
+  }
 
-    .header-image {
-      max-width: 600px; /* adjust to your desired size */
-      width: 100%;      /* keep it responsive */
-      height: auto;
-      display: block;
-      margin: 0 auto;
+  @media (max-width: 400px) {
+    html {
+      font-size: 75%;
     }
+  }
 
-    .tagline {
-      position: absolute;
-      top: 83%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;              /* makes it stretch across the container */
-      text-align: center;       /* centers the text inside */
-      font-size: 1.2rem;
-      color: #555;
-      margin: 0;
-    }
+  /* ✅ 2. Body & base styles (unchanged) */
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Special Elite', monospace;
+    background: #ffffff;
+    color: #111111;
+  }
 
-    h1 {
-      font-size: 3rem;
-      margin: 0.5rem 0;
-      color: #000;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transform: rotate(-0.2deg);
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+  }
 
-    p, .text li {
-      line-height: 1.6;
-      color: #333;
-    }
+  header {
+    padding: 0 0.5rem;
+  }
 
-    p.tagline {
-      font-size: 1.1rem;
-      color: #444;
-    }
+  .header-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    .content-block {
-      padding: 2rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      max-width: 600px;
-      width: 100%;
-      text-align: left;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
-    }
+  .header-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-    .event {
-      background: #f5f5f5; /* light gray */
-    }
+  .tagline {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #555;
+    margin: 0;
+  }
 
-    .text {
-      background: #ffffff; /* white */
-    }
+  h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transform: rotate(-0.2deg);
+  }
 
-    .mix {
-      background: #ffffff; 
-      text-align: center;  /* if you want it different */
-    }
+  p, .text li {
+    line-height: 1.6;
+    color: #333;
+  }
 
-    .event h2, .mix h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #000;
-    }
+  p.tagline {
+    font-size: 1.1rem;
+    color: #444;
+  }
 
-    .mix h2 {
-      text-align: center;
-      font-family: 'Courier New', Courier, monospace;
-    }
+  .content-block {
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+  }
 
-    .event p {
-      margin: 0.5rem 0;
-    }
+  .event {
+    background: #f5f5f5;
+  }
 
-    .event-poster, .headerphoto, .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-      margin-top: 1rem;
-      display: block;
-    }
+  .text {
+    background: #ffffff;
+  }
 
-    .highlight {
-      font-weight: bold;
-      color: #000;
-    }
+  .mix {
+    background: #ffffff;
+    text-align: center;
+  }
 
-    .rsvp {
-      margin-top: 1rem;
-      margin-bottom: 0;
-      text-align: center;
-    }
+  .event h2, .mix h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
 
-    .rsvp a {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background 0.2s ease;
-    }
+  .mix h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
-    .rsvp a:hover {
-      background: #333;
-    }
+  .event p {
+    margin: 0.5rem 0;
+  }
 
-    .rsvp-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin: 0.5rem 0;
-    }
+  .event-poster, .headerphoto, .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    margin-top: 1rem;
+    display: block;
+  }
 
-    .rsvp-icon {
-      width: 100px;
-      height: auto;
-    }
+  .highlight {
+    font-weight: bold;
+    color: #000;
+  }
 
-    .rsvp-icon.mirrored {
-      transform: scaleX(-1);
-    }
+  .rsvp {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
 
-    footer {
-      margin-top: 0;
-      font-size: 0.9rem;
-      color: #777;
-      text-align: center;
-    }
+  .rsvp a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+  }
 
-    /* Grain overlay */
-    .noise-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-image: url('https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/background.png');
-      opacity: 0.9;
-      pointer-events: none;
-      z-index: 0;
-      mix-blend-mode: multiply;
-    }
+  .rsvp a:hover {
+    background: #333;
+  }
 
-    .divider {
-      border: none;
-      border-top: 1px solid #999;
-      margin: 2rem 0;
-      width: 100%;
-      max-width: 600px;
-    }
+  .rsvp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
 
-    .gallery {
-      max-width: 600px;
-      width: 100%;
-      margin: 2rem auto;
-      position: relative;
-    }
+  .rsvp-icon {
+    width: 100px;
+    height: auto;
+  }
 
-    .gallery-container {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      aspect-ratio: 3 / 2;
-      background: #000;
-    }
+  .rsvp-icon.mirrored {
+    transform: scaleX(-1);
+  }
 
-    .gallery-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
+  footer {
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+  }
 
-    .gallery-prev,
-    .gallery-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.4);
-      color: white;
-      border: none;
-      font-size: 2rem;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 50%;
-      user-select: none;
-    }
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/background.png');
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+  }
 
-    .gallery-prev:hover,
-    .gallery-next:hover {
-      background: rgba(0,0,0,0.7);
-    }
+  .divider {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 600px;
+  }
 
-    .gallery-prev {
-      left: 10px;
-    }
+  .gallery {
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    position: relative;
+  }
 
-    .gallery-next {
-      right: 10px;
-    }
+  .gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 3 / 2;
+    background: #000;
+  }
 
-    .gallery-dots {
-      text-align: center;
-      margin-top: 0.5rem;
-    }
+  .gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
 
-    .gallery-dots .dot {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
+  .gallery-prev,
+  .gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+  }
 
-    .gallery-dots .dot.active {
-      background-color: #717171;
-    }
-  </style>
+  .gallery-prev:hover,
+  .gallery-next:hover {
+    background: rgba(0,0,0,0.7);
+  }
+
+  .gallery-prev {
+    left: 10px;
+  }
+
+  .gallery-next {
+    right: 10px;
+  }
+
+  .gallery-dots {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .gallery-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .gallery-dots .dot.active {
+    background-color: #717171;
+  }
+</style>
+
 </head>
 <body>
   <div class="noise-overlay"></div>
