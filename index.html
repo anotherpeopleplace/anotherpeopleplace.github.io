@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Another People Place</title>
 
-  <!-- Distressed typewriter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
 
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Special Elite', monospace;
+      font-family: 'Nunito', sans-serif;
       background: #ffffff;
       color: #111111;
     }
@@ -24,6 +23,7 @@
       padding: 2rem;
       position: relative;
       z-index: 1;
+      background-color: #ffffff;
     }
 
     header {
@@ -31,44 +31,21 @@
     }
 
     .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 3rem;
       text-align: center;
-      flex-wrap: nowrap;
+      margin-bottom: 2rem;
     }
 
-    .header-content {
-      flex: 0 1 auto;
-    }
-
-    .header-icon {
-      width: 80px;
+    .header-image {
+      max-width: 600px; /* adjust to your desired size */
+      width: 100%;      /* keep it responsive */
       height: auto;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
 
-    .header-icon.mirrored {
-      transform: scaleX(-1);
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 0 0.3rem;
-      }
-      
-      .header-icon {
-        width: 60px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .event {
-        padding: 1.5rem;
-      }
+    .tagline {
+      font-size: 1.2rem;
+      color: #555;
     }
 
     h1 {
@@ -286,17 +263,13 @@
   <div class="noise-overlay"></div>
 
   <header class="header-container">
-    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/stack.jpg" alt="Left Icon" class="header-icon" />
-    <div class="header-content">
-      <h1>Another People Place</h1>
-      <p class="tagline">A party and soundsystem in Glasgow</p>
-    </div>
-    <img src="images/stack.jpg" alt="Right Icon" class="header-icon mirrored" />
+    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/header.jpg" alt="Header Image" class="header-image" />
+    <p class="tagline">A party and soundsystem in Glasgow</p>
   </header>
 
   <section class="event content-block">
     <h2>Upcoming party</h2>
-    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/main/images/headerphoto.jpg" alt="Party Poster" class="event-poster" />
+    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/poster.jpg" alt="Party Poster" class="event-poster" />
     <div class="rsvp">
       <a href="https://www.tickettailor.com/" class="rsvp-button" target="_blank" rel="noopener noreferrer">Advance Tix</a>
     </div>
