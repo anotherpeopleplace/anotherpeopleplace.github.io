@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Another People Place</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
 
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Special Elite', monospace;
       background: #ffffff;
       color: #111111;
     }
@@ -31,6 +31,7 @@
     }
 
     .header-container {
+      position: relative;   /* Make this a positioned container */
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -40,12 +41,19 @@
       width: 100%;      /* keep it responsive */
       height: auto;
       display: block;
-      margin: 0 auto 1rem auto;
+      margin: 0 auto;
     }
 
     .tagline {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;              /* makes it stretch across the container */
+      text-align: center;       /* centers the text inside */
       font-size: 1.2rem;
       color: #555;
+      margin: 0;
     }
 
     h1 {
@@ -174,8 +182,8 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fHww');
-      opacity: 0.04;
+      background-image: url('https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/background.png');
+      opacity: 0.9;
       pointer-events: none;
       z-index: 0;
       mix-blend-mode: multiply;
@@ -263,7 +271,7 @@
   <div class="noise-overlay"></div>
 
   <header class="header-container">
-    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/header.jpg" alt="Header Image" class="header-image" />
+    <img src="https://raw.githubusercontent.com/anotherpeopleplace/anotherpeopleplace.github.io/refs/heads/main/images/header.png" alt="Header Image" class="header-image" />
     <p class="tagline">A party and soundsystem in Glasgow</p>
   </header>
 
@@ -276,27 +284,25 @@
   </section>
 
   <section class="text content-block">
-    <p>Dedicated to the deepest soulful cuts, and a house party feel. Weaving through a techno tapestry cut from the cosmos… rooted in the lineage of sounds from detroit and chicago. Channeling elevated and interconnected musical unity here in Glasgow. Can you feel it!?</p>
-    <p><i>“the ability to consider jazz, soul, disco and techno as a lineage that’s OK to mix together. They’re all the same music, some made by humans controlling machines, some by humans controlling instruments, and you don’t have to believe a club night needs one specific sound.”</i> - Floating Points</p>
-    <p>Keeping the ears safe and the soul warm.</p>
-    <p>For fans of Theo, Kenny Dixon Jr,  the Ron’s, UR, and all innovators in that deep legacy.</p>
-
-    <h2>The story so far...</h2>
-    <p>In late 2023 we had the idea to start building a soundsystem. Over the course of last year we spent whatever time we could find, drawing up plans, self-doubting over design choices, making a mess with wood glue in the workshop, and painting by headtorch. After a few successful test outings in the last few months we're now buzzing to start a regular party using it. These parties will be held in Civic House's downstairs venue space - a building we're very familiar with through the running of Coorie Doon since 2023. This night aims to share a lot of the core ethos around the joy of dancing and community spirit but with an additional focus on the DIY exploration of audio and with a marginally 'deeper' sound, specifically revolving around the sounds of Detroit.</p>
-    <p>What to expect from these nights?</p>
+    <p>Another People Place is a Glasgow-based soundsystem, party and community of friends. We are guided by the spiritual power of music to collectively move the mind, body and soul. Whether it be Ron Hardy and the Muzic Box in Chicago, David Mancsuo and The Loft in NY or Glasgow's DIY ethos, the originators of club culture showed us that commitment to the fundamentals is what matters. A great soundsystem, an inviting and exciting space, soulful diverse music and an open culture of expressive freedom. Inspired by our admiration of black American musical lineages and the openness of modern institutions like Plastic People and Cosmic Slop, we began exploring the creation of a new night and community in Glasgow.</p>
+    <p>In late 2023 we had the idea to start building a soundsystem. Over the course of last year we spent whatever time we could in the workshop, drawing up plans, making a mess with wood glue, and painting by headtorch. Drawing upon the classic Altec A7 design used at places like Cosmic Slop, we’ve built our own 4-way system unique to Glasgow that we are excited to share and continue developing in times ahead.</p>
+    <p>Despite a strong historical link between Glasgow and black music coming out of places like Detroit, we wanted to hear a more expansive representation of this sound that we are so moved by. For us, this deep and soulful musical tapestry transcends any idea of genre, and is inspired by a feeling of warmth, movement and connection. <a href="https://www.theguardian.com/music/musicblog/2015/jan/07/london-club-plastic-people-remembered-ade-fakile-floating-points" target="_blank" rel="noopener noreferrer">Floating Points</a> says it as well we could when discussing the legacy of Plastic People:</p>
+    <p><i>“...the ability to consider jazz, soul, disco and techno as a lineage that’s OK to mix together. They’re all the same music, some made by humans controlling machines, some by humans controlling instruments, and you don’t have to believe a club night needs one specific sound.”</i> - Floating Points</p>
+    <p>Bringing together this musical approach and our DIY soundsystem, we wanted to create a club night that kept that house party feel. These parties will be held in Civic House's downstairs venue space - a building we're very familiar with through the running of <a href="https://www.cooriedoonparty.org/" target="_blank" rel="noopener noreferrer">Coorie Doon</a> since 2023. This night aims to share a lot of the core ethos around the joy of dancing and community spirit. So, what to expect from these nights?</p>
     <ul>
-      <li>Two stacks of carefully tuned speakers featuring classic Altec designs (shout out to Cosmic Slop for the inspiration <3) powered by modern drivers and amplification</li>
+      <li>A unique sound system in Glasgow. Two stacks of carefully tuned speakers featuring classic Altec designs powered by modern drivers and amplification</li>
       <li>Sonic exploration through the music selections and the building/upgrading of the system over time</li>
-      <li>An, as yet, untested wooden parquet dancefloor that we drove across the country in a van to pick up</li>
-      <li>Some cool lights</li>
-      <li>Deep selections, big grooves, warm atmosphere, communal energy</li>
+      <li>An, as yet, untested wooden parquet dance floor that we drove across the country in a van to pick up</li>
+      <li>An intimate dancing space decorated to transport us across the cosmos</li>
+      <li>Deep warm and soulful musical selections inspired by the likes of Theo, Kenny Dixon Jr and Ron Trent</li>
+      <li>A house party feel</li>
     </ul>
 
     <h2>House rules</h2>
     <ul>
       <li>Show kindness and respect towards fellow dancers</li>
-      <li>No photos, videos, or excessive chatting on the dancefloor</li>
-      <li>Zero tolerance for any discrimonatory language or actions, the dancefloor is a safe space for freedom of expression</li>
+      <li>No photos, videos, or excessive yapping on the dancefloor</li>
+      <li>Zero tolerance for any discriminatory language or actions, the dance floor is a safe space for freedom of expression</li>
     </ul>
 
     <h2>Mailing list</h2>
